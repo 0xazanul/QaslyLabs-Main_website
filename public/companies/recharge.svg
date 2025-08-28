@@ -1,0 +1,6 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="40" rx="8" fill="#00d4aa"/>
+  <text x="60" y="25" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="600">Recharge</text>
+  <polygon points="12,12 18,12 15,20 12,20" fill="#ffffff"/>
+  <polygon points="18,20 24,20 21,28 18,28" fill="#ffffff"/>
+</svg>

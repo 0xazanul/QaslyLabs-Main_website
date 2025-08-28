@@ -1,0 +1,6 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="40" rx="8" fill="#ff9500"/>
+  <text x="60" y="25" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="600">Ethswarm</text>
+  <polygon points="15,12 20,16 15,20 10,16" fill="#ffffff"/>
+  <polygon points="20,16 25,20 20,24 15,20" fill="#ffffff" opacity="0.7"/>
+</svg>
