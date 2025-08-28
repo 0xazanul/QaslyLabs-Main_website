@@ -1,6 +1,7 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import Logo from "./Logo";
 
 interface LaunchAnimationProps {
   isVisible: boolean;
@@ -73,7 +74,7 @@ export default function LaunchAnimation({ isVisible, onComplete }: LaunchAnimati
                   className="mb-6"
                 >
                   <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-2xl">
-                    <span className="text-black font-black text-3xl">Q</span>
+                    <Logo size={64} showText={false} />
                   </div>
                 </motion.div>
               )}

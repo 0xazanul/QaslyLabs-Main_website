@@ -1,20 +1,25 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Use Inter as the primary clean, modern UI font and a mono for code areas
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetMono = JetBrains_Mono({
+  variable: "--font-jet-mono",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
   title: "Qasly Labs | Security Research & Vulnerability Detection",
   description: "Professional security research lab. Find vulnerabilities in vibe-coded apps and get alerted about potential security issues.",
+  icons: {
+    icon: '/qasly-logo.svg',
+    apple: '/qasly-logo.svg',
+  },
 };
 
 export default function RootLayout({
@@ -25,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}
+        className={`${inter.variable} ${jetMono.variable} antialiased bg-black text-white`}
       >
         {children}
       </body>

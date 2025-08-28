@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import Logo from "./Logo";
 
 export default function Header() {
   const pathname = usePathname();
@@ -12,12 +13,8 @@ export default function Header() {
     <header className="w-full bg-black border-b border-neutral-800 sticky top-0 z-50">
       <nav className="w-full max-w-4xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center py-4">
-          <Link href="/" className="text-white font-medium text-lg hover:text-neutral-300 transition-colors flex items-center gap-2">
-            <div className="w-6 h-6 bg-white rounded-md flex items-center justify-center">
-              <span className="text-black font-bold text-xs">Q</span>
-            </div>
-            <span className="hidden sm:inline">Qasly Labs</span>
-            <span className="sm:hidden">Qasly</span>
+          <Link href="/" className="hover:opacity-80 transition-opacity">
+            <Logo size={32} showText={true} />
           </Link>
           
           {/* Desktop Navigation */}

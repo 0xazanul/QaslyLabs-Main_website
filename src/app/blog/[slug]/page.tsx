@@ -4,8 +4,8 @@ import BlogPostClient from "@/components/BlogPostClient";
 
 export default async function BlogPost({ params }: { params: { slug: string } }) {
   // Check if the post exists on the server first
-  const post = getBlogPostBySlug(params.slug);
-  
+  const post = await getBlogPostBySlug(params.slug);
+
   if (!post) {
     notFound();
   }
@@ -15,8 +15,8 @@ export default async function BlogPost({ params }: { params: { slug: string } })
 
 export async function generateStaticParams() {
   try {
-    const posts = getBlogPosts();
-    
+    const posts = await getBlogPosts();
+
     return posts.map((post) => ({
       slug: post.slug,
     }));

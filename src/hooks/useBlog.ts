@@ -11,7 +11,7 @@ const initialBlogPosts: BlogPost[] = [
     frontmatter: {
       title: 'Loading...',
       description: 'Loading blog posts...',
-      date: new Date().toISOString(),
+      date: '2025-01-01', // Use a static date to prevent hydration issues
       category: 'Loading',
       readTime: '0 min read'
     },

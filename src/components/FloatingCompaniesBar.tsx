@@ -58,7 +58,7 @@ export default function FloatingCompaniesBar() {
           transition={{ duration: 0.6 }}
           className="text-3xl md:text-4xl font-bold text-white mb-4"
         >
-          <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-neutral-200 via-neutral-400 to-neutral-200 bg-clip-text text-transparent">
             Companies Secured
           </span>
         </motion.h3>
@@ -94,7 +94,7 @@ export default function FloatingCompaniesBar() {
                 whileHover={{ scale: 1.05, y: -5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <div className="relative w-52 h-24 bg-white/95 backdrop-blur-sm border border-neutral-300/50 rounded-2xl flex items-center justify-center hover:border-blue-500/50 hover:bg-white hover:shadow-2xl transition-all duration-500 shadow-lg group-hover:shadow-blue-500/20 overflow-hidden group">
+                <div className="relative w-52 h-24 bg-white/95 backdrop-blur-sm border border-neutral-300/50 rounded-2xl flex items-center justify-center hover:border-neutral-500/50 hover:bg-white hover:shadow-2xl transition-all duration-500 shadow-lg group-hover:shadow-neutral-500/20 overflow-hidden group">
                   {/* Company Logo */}
                   <div className="relative w-full h-full flex items-center justify-center p-6">
                     <Image
@@ -108,10 +108,10 @@ export default function FloatingCompaniesBar() {
                   </div>
                   
                   {/* Shine effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-neutral-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
                   
                   {/* Subtle glow border effect */}
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/0 via-blue-500/20 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-neutral-500/0 via-neutral-500/20 to-neutral-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
               </motion.div>
             ))}
@@ -128,7 +128,7 @@ export default function FloatingCompaniesBar() {
         {Array.from({ length: 20 }).map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-blue-400/30 rounded-full"
+            className="absolute w-1 h-1 bg-neutral-400/30 rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
