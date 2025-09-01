@@ -43,7 +43,7 @@ export default function Home() {
                 transition={{ delay: 0.15, duration: 0.3 }}
                 className="text-lg sm:text-xl md:text-2xl font-medium mb-6 sm:mb-8 text-neutral-300 max-w-3xl mx-auto leading-relaxed px-4 text-center" 
               >
-                Find vulnerabilities in Vibe-coded applications
+                Launch fast, stay secure.
               </motion.h2>
               
               <motion.div 
