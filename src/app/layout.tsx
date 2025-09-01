@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 // Use Inter as the primary clean, modern UI font and a mono for code areas
@@ -39,6 +40,7 @@ export default function RootLayout({
         className={`${inter.variable} ${jetMono.variable} antialiased bg-black text-white`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
