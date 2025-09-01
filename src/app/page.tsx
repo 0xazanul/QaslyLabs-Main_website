@@ -116,12 +116,8 @@ export default function Home() {
                   title: "Continuous Monitoring",
                   description: "Real-time monitoring with instant notifications for security threats",
                   metric: "< 1min response time"
-                },
-                {
-                  title: "Enterprise Integration",
-                  description: "Seamless integration with existing development and security workflows",
-                  metric: "50+ integrations"
                 }
+               
               ].map((feature, i) => (
                 <motion.div
                   key={feature.title}
