@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 
 export default function ContactSection() {
@@ -15,15 +14,12 @@ export default function ContactSection() {
     setSuccess(null);
     setError(null);
     try {
-      console.log('ContactSection submitting:', { name, email, message });
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, message }),
       });
-      console.log('Response status:', res.status);
       const data = await res.json();
-      console.log('Response data:', data);
       if (data.success) {
         setSuccess("Message sent successfully!");
         setName("");
@@ -33,7 +29,6 @@ export default function ContactSection() {
         setError(data.error || "Failed to send message.");
       }
     } catch (err: any) {
-      console.error("Contact error:", err);
       setError("Something went wrong. Please try again later.");
     } finally {
       setLoading(false);

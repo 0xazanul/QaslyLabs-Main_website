@@ -13,7 +13,7 @@ export default function LaunchButton() {
   const handleAnimationComplete = () => {
     setShowAnimation(false);
     // Launch the platform
-    window.open("https://app.qaslylabs.xyz", "_blank");
+    window.open("http://localhost:3001/", "_blank");
   };
 
   return (
