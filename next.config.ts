@@ -1,12 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export", // ✅ needed for static export
+  // ❌ remove this line: output: "export",
   eslint: {
-    ignoreDuringBuilds: true, // ✅ skip ESLint errors during build
+    ignoreDuringBuilds: true,
   },
   typescript: {
-    ignoreBuildErrors: true, // ✅ skip TS errors during build
+    ignoreBuildErrors: true,
   },
 };
 
