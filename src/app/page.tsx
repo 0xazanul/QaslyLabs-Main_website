@@ -52,15 +52,13 @@ export default function Home() {
                 transition={{ delay: 0.2, duration: 0.3 }}
                 className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-center justify-center mt-8 sm:mt-12 px-4"
               >
-                <LaunchButton />
                 <Button
                   asChild
-                  variant="outline"
                   size="lg"
-                  className="w-full sm:w-auto px-6 sm:px-8 py-3 text-base font-medium border border-neutral-600 text-white hover:bg-neutral-900 transition-colors duration-200 rounded-md"
+                  className="w-full sm:w-auto px-6 sm:px-8 py-3 text-base font-medium bg-white text-black hover:bg-neutral-100 transition-colors duration-200 rounded-md"
                 >
                   <Link href="/contact">
-                    Contact Sales
+                    Contact Us
                   </Link>
                 </Button>
               </motion.div>

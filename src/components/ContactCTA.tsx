@@ -17,7 +17,7 @@ export default function ContactCTA() {
             size="lg"
             className="px-6 py-3 text-base font-medium bg-white text-black hover:bg-neutral-100 transition-colors duration-200 rounded-md"
           >
-            Contact Sales
+            Contact Us
           </Button>
         </Link>
       </div>
