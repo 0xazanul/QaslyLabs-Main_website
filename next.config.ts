@@ -9,6 +9,9 @@ const nextConfig: NextConfig = {
   // Performance optimizations
   compress: true, // Enable gzip compression
   
+  // Force compression to be enabled
+  poweredByHeader: false, // Remove X-Powered-By header for security
+  
   // Experimental features for better performance
   experimental: {
     // Note: optimizeCss can cause build issues, enable after testing
@@ -22,15 +25,37 @@ const nextConfig: NextConfig = {
   webpack: (config, { dev, isServer }) => {
     // Production optimizations
     if (!dev) {
-      // Enable tree shaking
+      // Enable tree shaking and compression
       config.optimization = {
         ...config.optimization,
         usedExports: true,
         sideEffects: false,
+        minimize: true,
       };
 
-      // Minimize and compress
-      config.optimization.minimize = true;
+      // Add compression plugins
+      if (!isServer) {
+        config.optimization.splitChunks = {
+          ...config.optimization.splitChunks,
+          cacheGroups: {
+            default: false,
+            vendors: false,
+            vendor: {
+              name: 'vendor',
+              chunks: 'all',
+              test: /node_modules/,
+              priority: 20
+            },
+            common: {
+              name: 'common',
+              minChunks: 2,
+              priority: 10,
+              reuseExistingChunk: true,
+              enforce: true
+            }
+          }
+        };
+      }
     }
 
     return config;

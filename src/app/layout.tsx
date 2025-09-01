@@ -6,11 +6,17 @@ import "./globals.css";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap", // Optimize font loading
+  preload: true,
+  fallback: ['system-ui', 'arial'],
 });
 
 const jetMono = JetBrains_Mono({
   variable: "--font-jet-mono",
   subsets: ["latin"],
+  display: "swap", // Optimize font loading
+  preload: true,
+  fallback: ['ui-monospace', 'monospace'],
 });
 
 export const metadata: Metadata = {
