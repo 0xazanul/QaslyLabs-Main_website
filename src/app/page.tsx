@@ -58,7 +58,7 @@ export default function Home() {
                   className="w-full sm:w-auto px-6 sm:px-8 py-3 text-base font-medium bg-white text-black hover:bg-neutral-100 transition-colors duration-200 rounded-md"
                 >
                   <Link href="/contact">
-                    Contact Us
+                    Join Waitlist
                   </Link>
                 </Button>
               </motion.div>
